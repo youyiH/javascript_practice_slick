@@ -9,33 +9,39 @@
 </head>
 
 <body>
-    <!-- 輪播圖大盒子 -->
-    <div id="ue-slider">
+    <!-- 輪播圖大盒子:data-slider-duration 自動輪播速度 -->
+    <div id="kid-slider" data-slider-duration="3000">
 
         <!-- 輪播圖項目 -->
-        <div class="ue-item ue-active">
-            <div class="ue-item">
-                <img src="./photo/1.jpg" alt="">
-                <h1>LIGHT</h1>
-            </div>
-
-            <div class="ue-item">
-                <img src="./photo/2.jpg" alt="">
-                <h1>WHITE</h1>
-            </div>
-
-            <div class="ue-item">
-                <img src="./photo/3.jpg" alt="">
-                <h1>FINE</h1>
-            </div>
-
-
-            <!-- 大顆按扭區塊 -->
-            <div id="ue-prev"></div>
-            <div id="ue-next"></div>
+        <div class="kid-item kid-active">
+            <img src="./photo/1.jpg" alt="">
+            <h1>WHITE</h1>
         </div>
 
-        <script src="./script.js"></script>
+        <div class="kid-item">
+            <img src="./photo/2.jpg" alt="">
+            <h1>SNOW</h1>
+        </div>
+
+        <div class="kid-item">
+            <img src="./photo/3.jpg" alt="">
+            <h1>EVERYTHING</h1>
+        </div>
+
+        <!-- 大顆按扭區塊 -->
+        <div id="kid-prev"></div>
+        <div id="kid-next"></div>
+
+        <!-- 小顆按鈕區塊 -->
+        <div id="kid-buttons">
+            <div class="kid-button kid-button-active " data-slider-item="1"></div>
+            <div class="kid-button" data-slider-item="2"></div>
+            <div class="kid-button" data-slider-item="3"></div>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>

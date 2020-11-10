@@ -7,75 +7,120 @@
   font-family: 微軟正黑體;
 }
 
-#ue-slider {
+#kid-slider {
   height: 100vh;
   overflow: hidden;
 }
 
-#ue-slider .ue-item {
+#kid-slider .kid-item {
   position: relative;
   height: 100%;
   width: 100%;
   display: none;
 }
 
-#ue-slider .ue-item img {
+#kid-slider .kid-item img {
   position: absolute;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-animation-name: ueImage;
-          animation-name: ueImage;
+  -webkit-animation-name: kidImage;
+          animation-name: kidImage;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
 
-#ue-slider .ue-item h1 {
+#kid-slider .kid-item h1 {
   position: absolute;
-  color: white;
+  color: gainsboro;
   top: 100px;
   left: 150px;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   z-index: 2;
-  -webkit-animation-name: ueTitle;
-          animation-name: ueTitle;
+  -webkit-animation-name: kidTitle;
+          animation-name: kidTitle;
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
-  animation-delay: 0.5s;
-  animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
 }
 
-#ue-slider .ue-active {
+#kid-slider .kid-active {
   display: block;
 }
 
-#ue-slider #ue-prev,
-#ue-slider #ue-next {
+#kid-slider #kid-prev,
+#kid-slider #kid-next {
   width: 80px;
   height: 150px;
-  background: #ffffff66;
+  background: gray;
   position: absolute;
   z-index: 3;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  cursor: pointer;
 }
 
-#ue-slider #ue-prev {
+#kid-slider #kid-prev {
   left: 0;
 }
 
-#ue-slider #ue-next {
+#kid-slider #kid-next {
   right: 0;
 }
 
-@-webkit-keyframes ueImage {
+#kid-slider #kid-buttons {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+
+#kid-slider #kid-buttons .kid-button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: gray;
+  opacity: 0.3;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#kid-slider #kid-buttons .kid-button-active {
+  -webkit-animation-name: kidButton;
+          animation-name: kidButton;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes kidButton {
+  0% {
+    background: grey;
+  }
+  100% {
+    background: #575757;
+  }
+}
+
+@keyframes kidButton {
+  0% {
+    background: grey;
+  }
+  100% {
+    background: #575757;
+  }
+}
+
+@-webkit-keyframes kidImage {
   0% {
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
@@ -86,7 +131,7 @@
   }
 }
 
-@keyframes ueImage {
+@keyframes kidImage {
   0% {
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
@@ -97,7 +142,7 @@
   }
 }
 
-@-webkit-keyframes ueTitle {
+@-webkit-keyframes kidTitle {
   0% {
     -webkit-transform: translateX(-500px);
             transform: translateX(-500px);
@@ -108,7 +153,7 @@
   }
 }
 
-@keyframes ueTitle {
+@keyframes kidTitle {
   0% {
     -webkit-transform: translateX(-500px);
             transform: translateX(-500px);
