@@ -1,0 +1,121 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 微軟正黑體;
+}
+
+#ue-slider {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#ue-slider .ue-item {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+#ue-slider .ue-item img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation-name: ueImage;
+          animation-name: ueImage;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#ue-slider .ue-item h1 {
+  position: absolute;
+  color: white;
+  top: 100px;
+  left: 150px;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  -webkit-animation-name: ueTitle;
+          animation-name: ueTitle;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+
+#ue-slider .ue-active {
+  display: block;
+}
+
+#ue-slider #ue-prev,
+#ue-slider #ue-next {
+  width: 80px;
+  height: 150px;
+  background: #ffffff66;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#ue-slider #ue-prev {
+  left: 0;
+}
+
+#ue-slider #ue-next {
+  right: 0;
+}
+
+@-webkit-keyframes ueImage {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes ueImage {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes ueTitle {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes ueTitle {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
