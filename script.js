@@ -13,6 +13,7 @@ function btnNext() {
 
     showItem();
     reset();
+    switchButton();
 }
 
 // 按鈕函式:上一張
@@ -22,6 +23,7 @@ function btnPrev() {
     if (index == -1) index = items.length - 1;  //如果編號超出範圍 編號等於 長度-1
     showItem();
     reset();
+    switchButton();
 }
 
 next.onclick = btnNext;    //點擊函式
@@ -62,5 +64,15 @@ for (var i = 0; i < btns.length; i++) {
 
         showItem();
         reset();
+        switchButton();
     }
+}
+
+// 小按鈕啟動效果切換
+function switchButton() {
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.remove("kid-button-active");
+    }
+
+    btns[index].classList.add("kid-button-active");
 }
